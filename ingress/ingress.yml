@@ -12,21 +12,21 @@ spec:
   - http:
       paths:
       - path: /nginx(/|$)(.*)
-        pathType: Prefix
+        pathType: ImplementationSpecific
         backend:
           service:
             name: nginx
             port:
               number: 80
       - path: /httpd(/|$)(.*)
-        pathType: Prefix
+        pathType: ImplementationSpecific
         backend:
           service:
             name: httpd
             port:
               number: 80
       - path: /(.*)
-        pathType: Prefix
+        pathType: ImplementationSpecific
         backend:
           service:
             name: nginx
